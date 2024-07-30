@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>form 2</title>
+    <style>
+        /* styling-one */
+        .one {
+            background-image: url(./assets/image/back-n.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 105vh;
+            width: 95vw;
+            border: solid;
+
+        }
+/* styling-two */
+        .two {
+            background-image: url(./assets/image/back-n.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 105vh;
+            width: 30vw;
+            border: solid;
+            margin-top: -35.7%;
+
+        }
+/* styling-button */
+        .button:hover {
+
+            background-color: white;
+            color: black;
+            border: 2px solid #991111;
+        }
+/* button */
+        .button:hover {
+            background-color: #941d1d;
+            color: white;
+        }
+/* button2 */
+        .button2:hover {
+
+            background-color: white;
+            color: black;
+            border: 2px solid #094ebe;
+        }
+/* button2 */
+        .button2:hover {
+            background-color: #0c46bb;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- section-one -->
+    <div class="one"><img src="./assets/image/ep2.jpeg"
+            style="margin-left: 58%; margin-top:18%;border-radius: 50%; box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.5);">
+        <!-- section-two -->
+            <div class="two" style="float: left; box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.5);">
+            <!-- form-tag -->
+                <form action="ep_form_three.html" style="margin-left:15%;">
+                <h1 style="margin-left:3%;">Admission Form</h1>
+                <!-- last name -->
+                <label for="lastname">Last Name :</label>
+                <input type="text" id="lastname" placeholder="last name" />
+                <br />
+                <br />
+                <!-- firstname -->
+                <label for="firstname">First Name :</label>
+                <input type="text" id="firstname" placeholder="first name" />
+                <br />
+                <br />
+                <!-- middlename -->
+                <label for="middlename">Middle Name :</label>
+                <input type="text" id="middle" placeholder="middle name" />
+                <br />
+                <br />
+                <!-- DOB -->
+                <label for="DOB">DOB :</label>
+                <input type="date" id="DOB" />
+                <br />
+                <br />
+                <!-- gender -->
+                </label for="Gender">Gender :</lable></br>
+                <input type="radio" name="gender" /> Male <br>
+                <input type="radio" name="gender" /> Female<br><br>
+                <!--for education-->
+                </label for="education">Your Education :</lable><br>
+                <input type="radio" name="education" /> School <br>
+                <input type="radio" name="education" /> Jr.college<br>
+                <input type="radio" name="education" /> Under graduation <br>
+                <input type="radio" name="education" /> Post graduation <br>
+                <br>
+                <!-- phonenumber -->
+                <label for="phonenumber">Phone Namber :</label>
+                <input type="number" id="phonenumber" placeholder="phone number" />
+                <br />
+                <br />
+                <!-- email -->
+                <label for="email">Email ID :</label>
+                <input type="email" id="email" placeholder="email@.com" />
+                <br />
+                <br />
+                <!-- password -->
+                <label for="pass">Password :</label>
+                <input type="password" id="pass" placeholder="password" />
+                <br />
+                <br />
+                <!-- address -->
+                <label for="address">Address :</label>
+                <textarea placeholder="enter your address"></textarea>
+                <br>
+                <br>
+                <br>
+                <a href="ep_form_one.html"><button class="button" style="margin-left:-5%;" type="button">Preview </button></a>
+                <a href="ep_form_three.html"><button class="button2" style="margin-left:50%;" type="button">Submit</button></a>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
