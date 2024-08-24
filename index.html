@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Birthday</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
     <style>
         * {
             margin: 0%;
@@ -10,35 +12,38 @@
         }
 
         .main {
-            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20240424/pngtree-wide-screen-of-raindrops-on-blue-umbrella-with-blurry-of-road-image_15666985.jpg);
-            background-size: cover;
-            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.752);
             width: 100vw;
+            height: 100vh;
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
         }
 
-        .one {
-            background-color: rgba(252, 252, 252, 0);
-            height: 40vh;
-            width: 40vw;
-            text-align: center;
+    
+        .img:hover {
+            color: black 5px 5px 10px;
         }
 
-        a {
-            text-decoration: none;
-            font-size: 50px;
-            color: azure;
+        @media (min-width:300px) and (max-width:600px) {
+            .main {
+                background-color: rgb(0, 0, 0);
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <div class="one">
-            click on gift <br>
-            <a href="birthday.html">GIFT</a>
+        <div class="container">
+            <a href="rcc.html" style="color: forestgreen;"><img src="./assets/images/rcc-removebg-preview.png" alt="">RCC</a>
         </div>
     </div>
 </body>
