@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--====x-icon link====-->
+    <link rel="icon" type="x-icon" href="./assets/images/rcc-removebg-preview.png">
+    <!--====boostrap link====-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--====boostrap link====-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- title -->
+    <title>Rcc_Fertilizers</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* stylling to body */
+        body {
+            width: 100vw;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* stylling to container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* stylling to projects */
+        .projects {
+            margin-bottom: 50px;
+        }
+
+        /* stylling to projects heading 2 */
+        .projects h2 {
+            font-size: 2em;
+            color: #36d317;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* stylling to a:hover */
+        a:hover {
+            color: #245625;
+        }
+
+        /* stylling to project-list */
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        /* stylling to project-card */
+        .project-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* stylling to project-card:hover */
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* stylling to project-image */
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* stylling to project- */
+        .project-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* stylling to project-content */
+        .project-content h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* stylling to project-congtent */
+        .project-content p {
+            font-size: 1em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        /* stylling to project-link */
+        .project-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        /* stylling to project-link:hover */
+        .project-link:hover {
+            background-color: #45a049;
+        }
+
+        /* stylling to heading 3 */
+        h3 {
+            color: #25d366;
+            font-size: 1.2rem;
+        }
+
+        /* Stylling to ancher */
+        a {
+            text-decoration: none;
+        }
+
+        /* calling button */
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            height: 50px;
+            background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+            border-radius: 30px;
+            border: 1px solid #8F9092;
+            transition: all 0.2s ease;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #606060;
+            text-shadow: 0 1px #fff;
+        }
+
+        /* button:hover */
+        .buttons:hover {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+        }
+
+        /* button:active */
+        .buttons:active {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+        }
+
+        /* button:focus */
+        .buttons:focus {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <!--====NAVIGATION====-->
+    <nav id="home" class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <!-- logo&name in navbar-->
+            <a class="navbar-brand" href="#"><img src="./assets/images/rcc-removebg-preview.png" height="30"
+                    width="80">Relyance Crop Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <!-- logo&name in off canvas navbar -->
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label"><img
+                            src="./assets/images/rcc-removebg-preview.png" height="30" width="80">Relyance Crop Care
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="rcc_fertilizers.html">Sprays</a></li>
+                                <li><a class="dropdown-item" href="rcc_seeds.html">Seeds</a></li>
+                                <li><a class="dropdown-item" href="rcc_fertilizers.html">Fertilizers</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--====END NAVIGATION====-->
+    <div class="container">
+        <!--====Projects Section====-->
+        <section class="projects">
+            <h2>RCC-Seeds</h2>
+            <div class="projects-list">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('data:image/jpeg;base64,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');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR SSP</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSneCQUPZpkmPpUXH86MLjl90U8sN9kf3GmNg&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 20:20:0:13</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP2ID4mPM4bY0YwwkEsSET5ljUL_WyLKPIdA&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 10:26:26</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+                    </div>
+                </div>
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhQIaPOc671SeFavxUGyEgJVJigNm8ofULCg&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 28:28:00</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2vZnSC7Ae4pnmBbmKwCmoy5vK8I8fikV-AA&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR GROSHAKTI</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE6KdZQy_2RCd8isuwKsjDsxQAUiLOwkFkEQ&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR UREA</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKTt2hWFWslg8PzWRrhaYLFA_NXMxG8yvnSg&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR NEEM COATED UREA</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsUnPyajP9MQdlfMxljb_8i5QXxdDo3vPYvA&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 14:35:14</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVzIeRYnnkD7lAlyIuPt3gdPIjEeZcDWpTyw&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR M.O.P</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRNik331cE-uRfiMrurPX-h0Y0oElK266ebA&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR NEEM COATED UREA</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://agrofriend.com/SiteImages/ProductImages/1510_1.jpg');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 14:35:14</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://static.agrostar.in/static/AGS-S-2840_1.jpg');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR M.O.P</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3_SDCrP_K8poKmVSrMvCBQzRofd_aWBgBMA&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR NEEM COATED UREA</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJEYbNNOq4PYlb4IMMPr995gIA9Fnsi6_MQ&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 14:35:14</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGuxrWylgbdllHp9RkitRVQ5k1zuWUPaAa9w&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR M.O.P</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://agrofriend.com/SiteImages/ProductImages/1491_1.jpg');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR NEEM COATED UREA</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://rythuagro.in/wp-content/uploads/2023/07/p-14.png');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR 14:35:14</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMLpzW5FHseqfotOFcHqCUD2lQ1Qz6Ka2heQ&s');">
+                    </div>
+                    <div class="project-content">
+                        <h3>GROMOR M.O.P</h3>
+                        <p>A brief description of your project goes here. Highlight key features and technologies used.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====PROJECT SECTION====-->
+        <hr>
+        <!--====FOOTER====-->
+        <footer class="container">
+            <p class="float-end"></p>
+            <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+        <!--====END FOOTER-->
+</body>
+
+</html>
